@@ -133,9 +133,11 @@ ts([hwTracer, anotherTracer]).step(() => pub({test: "Hello World" }));
 
 This will only add the step to the tracer that is currently active.
 
-**:warning:CAVEAT**
+**:warning:CAVEATS**
 
 If both traces are active, the step will be added to both. There is no way to intrinsically differentiate between which one is the current call coming from. There is no way to enable a "maybe" scenario, in which pub is one time a part of one Tracer and another time the part of another Tracer, when both are active simultaneously. This could currently only be enabled by explicitly checking with an if statement when there is an externally available variable to safely differentiate which is the correct trace.
+
+Any async operations that would be executed before the `tracer.step` call need to be handled inside the callback passed to the `step` method in order to make sure the step can be started in time, before the trace is closed.
 
 ## Prod
 
