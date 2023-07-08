@@ -46,7 +46,7 @@ export default defineConfig((env) => ({
 	build: {
 		lib: {
 			entry: resolve(__dirname, "src/index.tsx"),
-			name: "event-tracer",
+			name: "lucid-events",
 			fileName: "index",
 		},
 		rollupOptions: {

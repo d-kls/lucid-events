@@ -12,6 +12,13 @@ npm install lucid-events
 
 ## Usage & Feature Explanation
 
+### Styles
+Import the style of the `EventTraceConsumer` in an entry point in your application 
+
+```typescript
+import "lucid-events/style";
+```
+
 ### Creating Events
 To create an event that receives a parameter, simply call the `createEvent` function:
 
