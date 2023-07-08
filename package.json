@@ -26,6 +26,7 @@
 		"event system",
 		"tracing"
 	],
+	"license": "MIT",
 	"scripts": {
 		"build": "npm run build:clean && tsc -p tsconfig.build.json && vite build && npm run build:copy",
 		"build:clean": "ts-node --esm scripts/clean.ts",
